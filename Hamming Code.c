@@ -36,7 +36,7 @@ char Helper(char lst[])
 	
 
 void GetHammingCode(char d[])
-{
+{--
 	char p1,p2,p4,p8;
 	char arr1[10] = {d[0],d[2],d[3],d[5],d[6]};
 	p1 = Helper(arr1);

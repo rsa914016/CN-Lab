@@ -3,9 +3,7 @@
 struct ed
 {
 	int v1,v2,w;
-}
-
-edj[20],temp;
+}edj[20],temp;
 
 int main()
 {
@@ -43,4 +41,5 @@ int main()
 			printf("%d  %d  %d\n",s,d,edj[i].w);
 		}
 	}
+	return 1; 
 }

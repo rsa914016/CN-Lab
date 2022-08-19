@@ -18,4 +18,5 @@ void main(){
 		}
 	}
 	printf(" 01111110");
+return 0;
 }

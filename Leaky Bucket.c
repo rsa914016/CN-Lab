@@ -23,8 +23,7 @@ int main()
 			storage=bucket_size;
 			printf("Buffer size: %d out of bucket size: %d\n", storage, bucket_size);					
 		}
-storage -= output_pkt_size;
-}
+		storage -= output_pkt_size;
+	}
 return 0;
 }
-

@@ -1,8 +1,6 @@
-#include <limits.h>
-#include <stdio.h>
-#include <stdbool.h>
-
-// Number of vertices in the graph
+#include<limits.h>
+#include<stdio.h>
+#include<stdbool.h>
 #define V 9
 
 int minDistance(int dist[], bool sptSet[])

@@ -1,9 +1,8 @@
 #include<stdio.h>
+#include<limits.h>
 
-struct node
-{
-    unsigned dist[20];
-    unsigned from[20];
+struct node{
+	unsigned dist[20],from[20];
 }rt[10];
 
 
@@ -20,10 +19,13 @@ int main()
         {
             scanf("%d",&costmat[i][j]);
             costmat[i][i]=0;
+            if(costmat[i][j] == 0)
+            	costmat[i][j] = INT_MAX;
             rt[i].dist[j]=costmat[i][j];
             rt[i].from[j]=j;
         }
     }
+
         do
         {
             count=0;

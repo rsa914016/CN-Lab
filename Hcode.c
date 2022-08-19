@@ -2,7 +2,7 @@
  
 int main() {
     int data[15];
-    int dataatrec[15],c,c1,c2,c3,i,c4;
+    int rdata[15],c,c1,c2,c3,i,c4;
  
     printf("Enter 7 bits of data one by one\n");
     scanf("%d",&data[0]);
@@ -25,12 +25,12 @@ int main() {
 
     printf("\n\nEnter received data bits one by one\n");
     for(i=0;i<11;i++)
-        scanf("%d",&dataatrec[i]);
+        scanf("%d",&rdata[i]);
  
-    c1=dataatrec[6]^dataatrec[4]^dataatrec[2]^dataatrec[0]^dataatrec[10]^dataatrec[8];
-	c2=dataatrec[5]^dataatrec[4]^dataatrec[1]^dataatrec[0]^dataatrec[8]^dataatrec[9];
-	c3=dataatrec[4]^dataatrec[5]^dataatrec[6]^dataatrec[7];
-	c4=dataatrec[0]^dataatrec[1]^dataatrec[2]^dataatrec[3];
+    c1=rdata[6]^rdata[4]^rdata[2]^rdata[0]^rdata[10]^rdata[8];
+	c2=rdata[5]^rdata[4]^rdata[1]^rdata[0]^rdata[8]^rdata[9];
+	c3=rdata[4]^rdata[5]^rdata[6]^rdata[7];
+	c4=rdata[0]^rdata[1]^rdata[2]^rdata[3];
 	c=c1*1+c2*2+c3*4+c4*8;
  
     if(c==0) {
@@ -39,16 +39,12 @@ int main() {
 	else {
 		printf("[Error Position] : %d\n",c);
 		printf("[Data received] : ");
-		    for(i=0;i<11;i++)
-		        printf("%d",dataatrec[i]);
+		for(i=0;i<11;i++)
+		    printf("%d",rdata[i]);
 		printf("\n[Corrected Data] : ");
 		//if errorneous bit is 0 we complement it else vice versa
-		if(dataatrec[11-c]==0)
-			dataatrec[11-c]=1;
-		else
-			dataatrec[11-c]=0;
-		for (i=0;i<11;i++) {
-		printf("%d",dataatrec[i]);
-		}
+		rdata[11-c]= !rdata[11-c];
+		for (i=0;i<11;i++)
+			printf("%d",rdata[i]);
 	}
 }
