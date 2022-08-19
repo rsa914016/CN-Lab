@@ -19,8 +19,6 @@ int main()
         {
             scanf("%d",&costmat[i][j]);
             costmat[i][i]=0;
-            if(costmat[i][j] == 0)
-            	costmat[i][j] = INT_MAX;
             rt[i].dist[j]=costmat[i][j];
             rt[i].from[j]=j;
         }
@@ -39,6 +37,7 @@ int main()
                     count++;
                 }
         }while(count!=0);
+        
         for(i=0;i<nodes;i++)
         {
             printf("\nFor router %d :\n",i+1);

@@ -44,7 +44,7 @@ int main()
 		case 4:return 0;
 	}
 	printf("Enter data:");
-	scanf("%s",t);
+	scanf("%s",&t);
 	printf("Generating polynomial:%s\n",g);
 	a=strlen(t);
 	for(e=a;e<a+N-1;e++)

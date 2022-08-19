@@ -41,5 +41,5 @@ int main()
 			printf("%d  %d  %d\n",s,d,edj[i].w);
 		}
 	}
-	return 1; 
+	return 0; 
 }

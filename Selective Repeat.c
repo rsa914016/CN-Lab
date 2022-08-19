@@ -16,7 +16,7 @@ int main(){
 			printf("Transmitting Packet %d\n",p);
 		
 		nac = i+rand()%w;
-		printf("NACK : %d\n",nac+1);
+		printf("NACK : %d\n",nac);
 		printf("Sending Packet : %d\n",nac);
 		printf("Ack : %d\n",nac+1);
 		printf("Ack : %d\n",i+w);

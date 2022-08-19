@@ -19,7 +19,7 @@ int main()
 		}
 		else
 		{
-			printf("Packet loss: %d\n", (input_pkt_size-(size_left)));
+			printf("Packet loss: %d\n",input_pkt_size-size_left);
 			storage=bucket_size;
 			printf("Buffer size: %d out of bucket size: %d\n", storage, bucket_size);					
 		}
